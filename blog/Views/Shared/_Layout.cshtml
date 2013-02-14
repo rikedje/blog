@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    
+</head>
+<body>
+    <div id="wrapper">
+	    <div id="header">
+		    <div id="logo">
+			    <h1><a href="/home">EdjeBlog</a></h1>
+		    </div>
+	    </div>
+	    <!-- end #header -->
+	    <div id="menu">
+		    <ul>
+			    <li class="current_page_item"><a href="/home">Home</a></li>
+			    <li><a href="/archive">Archive</a></li>
+                <li><a href="/page">Pages</a></li>
+                <li><a href="/tag">Tags</a></li>
+			    <li class="last"><a href="/page/About">About</a></li>
+		    </ul>
+	    </div>
+        <div id="three-columns">
+            <div class="content">      
+			    <div id="column1">
+                    @RenderBody()
+			    </div>
+            
+                
+            </div>
+        </div>            
+
+        <div id="footer">
+		<p>Copyright (c) 2013 edje.se. All rights reserved. Design inspiration from <a href="http://www.freecsstemplates.org">FCT</a>. Icons from <a href="http://iconify.it/">Iconify.it</a></p>
+	</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿@model Dictionary<string, int>
+
+@{
+    
+    ViewBag.Title = "[edjeblog_tags]";
+    
+    foreach (var tag in Model.OrderBy(t => t.Key))
+    {
+        {   
+            var style = "link-style-tag";
+            
+            <span>
+                @Html.ActionLink(tag.Key + " (" + tag.Value.ToString() + ")", "Tag", "Tag", new { tag = tag.Key }, new { @class=style})
+            </span>                         
+        }
+    }
+}

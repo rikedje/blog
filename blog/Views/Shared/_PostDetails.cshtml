@@ -1,0 +1,50 @@
+﻿@model EdjeBlog.Models.Post
+
+<div>
+        @{ 
+        DateTime tempDate = DateTime.Parse(Model.Date);
+        string day = tempDate.DayOfWeek.ToString();
+    }
+    <div class="date-style">
+        @Model.Date, @day
+           
+    </div>
+    <div>
+        <h1>@Model.Title</h1>
+    </div>
+    <div class="body">
+        @Html.Raw(Model.Body)
+    </div>
+
+    <table>
+        <tr>
+            <td>
+            @if(Model.Category.Length > 0) {
+                @Html.ActionLink(Model.Category, "Category", "Home", new {category = Model.Category}, new { @class="link-style-category"})
+            } 
+            else
+            {
+                    
+            } 
+            </td>
+            <td>
+            @{
+                foreach (var tag in Model.Tags)
+                {   
+                    if(tag.Length > 0)
+                    {
+                        <span>
+                            @Html.ActionLink(tag, "Tag", "Home", new { tag = tag }, new { @class="link-style-tag"})
+                            
+
+                        </span>
+                            
+                    }
+                }
+            }
+            </td>
+
+        </tr>
+        </table>
+	    <br />
+</div>

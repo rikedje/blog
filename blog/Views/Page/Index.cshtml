@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EdjeBlog.Models.Page>
+
+
+@{
+    ViewBag.Title = "[edjeblog_pages]";
+
+    foreach (var item in Model) {
+       
+        <span>
+             @Html.ActionLink(item.Title, "Details", "Page", new { title = item.Title}, new { @class="link-style-post"})
+       </span>
+    } 
+
+}       
+        
+
+ 

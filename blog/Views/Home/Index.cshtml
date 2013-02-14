@@ -1,0 +1,11 @@
+﻿@model IEnumerable<EdjeBlog.Models.Post>
+
+
+@{
+
+    ViewBag.Title = "[edjeblog_home]";    
+
+    foreach (var item in Model) {
+        Html.RenderPartial("_PostDetails", item);
+    }
+}

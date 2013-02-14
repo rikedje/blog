@@ -1,0 +1,9 @@
+﻿@model EdjeBlog.Models.Post
+
+
+@{
+    ViewBag.Title = "[edjeblog | " + Model.Title + "]";
+
+    Html.RenderPartial("_PostDetails", Model);
+      
+}
