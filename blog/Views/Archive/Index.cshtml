@@ -7,10 +7,11 @@
     foreach (var year in Model.Years)
     {
         {   
-            var style = "link-style-tag";
+            
+            var style = "btn";
             if(year == Model.CurrentYear)
             {
-                style = "date-style";
+                style = "btn btn-primary";
             }
             <span>
                 @Html.ActionLink(year, "Index", "Archive", new { year = year }, new { @class=style})
