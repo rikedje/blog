@@ -5,9 +5,25 @@
         DateTime tempDate = DateTime.Parse(Model.Date);
         string day = tempDate.DayOfWeek.ToString();
     }
+    
     <div class="date-style">
-        @Model.Date, @day
-           
+        <i class="icon-calendar"></i> @Model.Date, @day
+        <i class="icon-tags"></i>
+            @{
+                foreach (var tag in Model.Tags)
+                {   
+                    if(tag.Length > 0)
+                    {
+                        <span>
+                            
+                            @Html.ActionLink(tag, "Tag", "Tag", new { tag = tag }, new { @class="btn btn-mini"})
+                            
+
+                        </span>
+                            
+                    }
+                }
+            }   
     </div>
     <div>
         <h1>@Model.Title</h1>
@@ -28,20 +44,7 @@
             } 
             </td>
             <td>
-            @{
-                foreach (var tag in Model.Tags)
-                {   
-                    if(tag.Length > 0)
-                    {
-                        <span>
-                            @Html.ActionLink(tag, "Tag", "Home", new { tag = tag }, new { @class="link-style-tag"})
-                            
-
-                        </span>
-                            
-                    }
-                }
-            }
+            
             </td>
 
         </tr>

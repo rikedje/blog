@@ -1,6 +1,20 @@
 ﻿@model EdjeBlog.Models.Page
 
 <div class="page">
+    <i class="icon-tags"></i>
+    @{
+        foreach (var tag in Model.Tags)
+        {   
+            if(tag.Length > 0)
+            {
+                <span>
+                    @Html.ActionLink(tag, "Tag", "Tag", new { tag = tag }, new { @class="btn btn-mini"})
+
+                </span>
+                            
+            }
+        }
+    }
     <div>
         <h1>@Model.Title</h1>
     </div>
@@ -11,19 +25,7 @@
     <table>
         <tr>
             <td>
-            @{
-                foreach (var tag in Model.Tags)
-                {   
-                    if(tag.Length > 0)
-                    {
-                        <span>
-                            @Html.ActionLink(tag, "Tag", "Page", new { tag = tag }, new { @class="link-style-tag"})
-
-                        </span>
-                            
-                    }
-                }
-            }
+            
             </td>
 
         </tr>
