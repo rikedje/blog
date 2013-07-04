@@ -100,7 +100,8 @@ namespace EdjeBlog.Utils
 
                             let post = LoadPost(file.FullName)
 
-                            select new Post { Date = post.Date, Title = post.Title, Body = post.Body, Category = post.Category, Tags = post.Tags }).OrderByDescending(p => p.Date).ToList();
+                            //select new Post { Date = post.Date, Title = post.Title, Body = post.Body, Category = post.Category, Tags = post.Tags }).OrderByDescending(p => p.Date).ToList();
+                     select new Post { Date = post.Date, Title = post.Title, Body = post.Body, Tags = post.Tags }).OrderByDescending(p => p.Date).ToList();
                     
             return posts;
         }
@@ -144,8 +145,8 @@ namespace EdjeBlog.Utils
 
             string[] fopen = System.IO.File.ReadAllLines(file.FullName);
 
-            string categoryLine = fopen.FirstOrDefault() ?? "";
-            post.Category = categoryLine.Trim('{', '}');
+            // string categoryLine = fopen.FirstOrDefault() ?? "";
+            // post.Category = categoryLine.Trim('{', '}');
 
             string tagLine = fopen.ElementAtOrDefault(1) ?? "";
             post.Tags = from t in tagLine.Trim('{', '}').ToString().Split(',')
