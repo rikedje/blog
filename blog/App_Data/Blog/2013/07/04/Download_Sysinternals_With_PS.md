@@ -1,5 +1,4 @@
-{PowerShell}
-{ps,tools,utils}
+{ps,powershell,tools,utils}
 
 ### Download all the tools from Sysinternals
 Practice, practice, practice!

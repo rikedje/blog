@@ -1,5 +1,4 @@
-{newyears}
-{last}
+{test,last}
 
 The very last post of the year 2012.
 

@@ -1,5 +1,4 @@
-{PowerShell}
-{ps,tools,utils}
+{powershell,ps,tools,utils}
 
 ### Update with oneliner ###
 
