@@ -15,9 +15,9 @@ namespace EdjeBlog
 
             routes.MapRoute
                 (
-                    "PostTag",
-                    url: "tag/{tag}",
-                    defaults: new { controller = "Tag", action="Tag"}
+                "PostTag",
+                url: "tag/{tag}",
+                defaults: new { controller = "Tag", action="Tag"}
                 );
             routes.MapRoute
                 (
@@ -29,6 +29,16 @@ namespace EdjeBlog
                 "PageDetails",
                 url: "page/{title}",
                 defaults: new { controller = "Page", action = "Details"}
+            );
+            routes.MapRoute(
+                "ArchiveYear",
+                url: "archive/{year}",
+                defaults: new { controller = "Archive", action = "Index", year = UrlParameter.Optional  }
+            );
+            routes.MapRoute(
+                "ArchiveDetails",
+                url: "archive/details/{date}/{title}",
+                defaults: new { controller = "Archive", action = "Details", date = UrlParameter.Optional, title = UrlParameter.Optional }
             );
 
             routes.MapRoute(
