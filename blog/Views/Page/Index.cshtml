@@ -1,16 +1,12 @@
 ﻿@model IEnumerable<EdjeBlog.Models.Page>
 
-
 @{
-    ViewBag.Title = "[edjeblog_pages]";
-
+    ViewBag.Title = "[ Rikard Edje Blog | Pages]";
     foreach (var item in Model) {
-       
-        <span>
+        <div>
              @Html.ActionLink(item.Title, "Details", "Page", new { title = item.Title}, new { @class="link-style-post"})
-       </span>
+       </div>
     } 
-
 }       
         
 

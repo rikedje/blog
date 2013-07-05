@@ -1,4 +1,3 @@
-{category2012}
 {edjer,first}
 ##The very first post in the year 2012
 

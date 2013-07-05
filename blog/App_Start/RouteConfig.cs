@@ -19,12 +19,6 @@ namespace EdjeBlog
                     url: "tag/{tag}",
                     defaults: new { controller = "Tag", action="Tag"}
                 );
-            //routes.MapRoute
-            //    (
-            //        "PostCategory",
-            //        url: "category/{category}",
-            //        defaults: new { controller = "Home", action = "Category" }
-            //    );
             routes.MapRoute
                 (
                 "PageTag",

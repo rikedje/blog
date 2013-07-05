@@ -1,4 +1,3 @@
-{last}
 {newyears,test}
 ## This is the last post in year 2012
 

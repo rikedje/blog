@@ -10,10 +10,6 @@ namespace EdjeBlog.Models
     {
         public Post()
         {
-            // Category = "";
         }
-      
-        // public string Category { get; set; }            // content of first {}, like {category}
-
     }
 }

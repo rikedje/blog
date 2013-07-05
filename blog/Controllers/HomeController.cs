@@ -25,14 +25,6 @@ namespace EdjeBlog.Controllers
             return View(posts);
         }
         
-        //
-        // GET: /Home/Category?category=xxx
-        public ActionResult Category(string category)
-        {
-            IEnumerable<Post> posts = Repository.GetPosts().Where(p => p.Category == category);
-            return View("Index", posts);
-        }
-
         // GET: /Home/Reload?key=secret-reloadkey
         public ActionResult Reload(string key)
         {

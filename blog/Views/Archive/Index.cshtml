@@ -2,12 +2,11 @@
 
 @{
     
-    ViewBag.Title = "[edjeblog_archive]";
+    ViewBag.Title = "[ Rikard Edje Blog | Archive ]";
     
     foreach (var year in Model.Years)
     {
         {   
-            
             var style = "btn";
             if(year == Model.CurrentYear)
             {
@@ -25,11 +24,8 @@
     string day = tempDate.DayOfWeek.ToString();
     string year = tempDate.Year.ToString();    
        
-    <span>
-        <br />
-         @Html.ActionLink(item.Date, "Details", "Archive", new { date = item.Date, title = item.Title}, new { @class="date-style"})
-         @Html.ActionLink(item.Title, "Details", "Archive", new { date = item.Date, title = item.Title}, new { @class="link-style-post"})
-   </span>
-}        
-        
+    <div>
+         @Html.ActionLink(item.Date + " " + item.Title, "Details", "Archive", new { date = item.Date, title = item.Title}, new { @class="date-style"})
+   </div>
+}
  
